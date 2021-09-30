@@ -11,7 +11,7 @@
 ✍️ &nbsp;In my free time, I pursue ESports and Cosplay.\
 📄 &nbsp;Please have a look at my [Résumé](https://docs.google.com/document/d/1hdIOBuh6ORI6hOaz6uzLPPRQlWpciMFY/edit?rtpof=true&sd=true) for more details about me. I'm open to feedback and suggestions!
 
-<img alt="Night Coding" src="https://raw.githubusercontent.com/sanjeet-jain/sanjeet-jain/main/assets/Night-Coding.gif" align="right"/>
+<img alt="Night Gaming" src="https://raw.githubusercontent.com/sanjeet-jain/sanjeet-jain/main/assets/Night-Gaming.gif" align="right"/>
 
 ### 🛠 &nbsp;Tech Stack
 
