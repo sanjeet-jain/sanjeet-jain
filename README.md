@@ -47,8 +47,8 @@
 
 ### 🤝🏻 &nbsp;Connect with Me
 
-<a href="https://linkedin.com/in/sanjeet-jain">
-<img src="https://img.shields.io/badge/Sanjeet Jain-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://linkedin.com/in/sanjeet-jain"><img src="https://img.shields.io/badge/Sanjeet Jain-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://sanjeet-jain.github.io/"><img src="https://img.shields.io/badge/sanjeet_jain.github.io-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"/></a>
 <a href="https://steamcommunity.com/id/tkpro_sanjeet/"><img src="https://img.shields.io/badge/Jain_S-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white"/></a>
 <a href="mailto:sanjeetjain241210@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://www.facebook.com/tkprosanjeet/"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white"/></a>
