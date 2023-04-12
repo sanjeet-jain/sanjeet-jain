@@ -9,7 +9,7 @@
 🎓 &nbsp;I am currently working in Infosys as a System Engineer.\
 🌱 &nbsp;I'm on track for learning more about Systems Design, and Cloud Architecture.\
 ✍️ &nbsp;In my free time, I pursue ESports and Cosplay.\
-📄 &nbsp;Please have a look at my [Résumé](https://docs.google.com/document/d/1hdIOBuh6ORI6hOaz6uzLPPRQlWpciMFY/edit?rtpof=true&sd=true) for more details about me. I'm open to feedback and suggestions!
+📄 &nbsp;Please have a look at my [Résumé](https://sanjeet-jain.github.io/assets/files/Sanjeet_Jain_Resume.pdf) for more details about me. I'm open to feedback and suggestions!
 
 <img alt="Night Coding" src="https://raw.githubusercontent.com/sanjeet-jain/sanjeet-jain/main/assets/Night-Coding.gif" align="right"/>
 
