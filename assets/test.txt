@@ -1,0 +1,97 @@
+public class ValidateHeaderEmailRequirement : IAuthorizationRequirement
+{
+    public string HeaderName { get; }
+
+    public ValidateHeaderEmailRequirement(string headerName)
+    {
+        HeaderName = headerName;
+    }
+}
+
+
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Filters;
+using System.Security.Claims;
+
+public class ValidateHeaderEmailHandler : AuthorizationHandler<ValidateHeaderEmailRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, ValidateHeaderEmailRequirement requirement)
+    {
+        var httpContext = (context.Resource as AuthorizationFilterContext)?.HttpContext;
+
+        // Check for the required header
+        if (httpContext.Request.Headers.TryGetValue(requirement.HeaderName, out var headerValue))
+        {
+            // Get the email claim from JWT token
+            var emailClaim = context.User.FindFirst(c => c.Type == ClaimTypes.Email || c.Type == "email");
+
+            if (emailClaim != null && emailClaim.Value.Equals(headerValue, StringComparison.OrdinalIgnoreCase))
+            {
+                // If the header matches the email claim, succeed authorization
+                context.Succeed(requirement);
+            }
+        }
+
+        // Fail authorization if header is missing or doesn't match
+        context.Fail();
+        return Task.CompletedTask;
+    }
+}
+
+
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("ValidateEmailHeaderPolicy", policy =>
+        policy.Requirements.Add(new ValidateHeaderEmailRequirement("X-Email")));
+});
+
+builder.Services.AddSingleton<IAuthorizationHandler, ValidateHeaderEmailHandler>();
+
+
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+
+public class EmailHeaderFilter : IActionFilter
+{
+    public void OnActionExecuting(ActionExecutingContext context)
+    {
+        if (context.HttpContext.Request.Headers.TryGetValue("X-Email", out var email))
+        {
+            context.ActionArguments["email"] = email.ToString();
+        }
+    }
+
+    public void OnActionExecuted(ActionExecutedContext context) { }
+}
+
+
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<EmailHeaderFilter>();
+});
+
+
+
+
+
+
+
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+[Authorize(Policy = "ValidateEmailHeaderPolicy")]
+[ApiController]
+[Route("[controller]")]
+public class MyController : ControllerBase
+{
+    [HttpGet]
+    public IActionResult MyAction(string email)
+    {
+        return Ok($"Email from header: {email}");
+    }
+}
+
+
