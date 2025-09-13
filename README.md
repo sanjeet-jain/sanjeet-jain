@@ -6,7 +6,7 @@
 ### 👨🏻‍💻 &nbsp;About Me
 
 💡 &nbsp;I like to explore new technologies and develop software solutions.\
-🎓 &nbsp;I am currently working in Infosys as a System Engineer.\
+🎓 &nbsp;I am currently working in UPS as a Senior Software Engineer.\
 🌱 &nbsp;I'm on track for learning more about Systems Design, and Cloud Architecture.\
 ✍️ &nbsp;In my free time, I pursue ESports and Cosplay.\
 📄 &nbsp;Please have a look at my [Résumé](https://sanjeet-jain.github.io/assets/files/Sanjeet_Jain_Resume.pdf) for more details about me. I'm open to feedback and suggestions!
